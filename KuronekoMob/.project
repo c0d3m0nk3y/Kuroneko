@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>KuronekoMob</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.apollobuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexide.project.multiplatform.multiplatformasnature</nature>
+		<nature>com.adobe.flexide.project.multiplatform.multiplatformnature</nature>
+		<nature>com.adobe.flexbuilder.project.apollonature</nature>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>[source path] Kuroneko-src</name>
+			<type>2</type>
+			<locationURI>DOCUMENTS/Kuroneko/libraries/Kuroneko/src</locationURI>
+		</link>
+		<link>
+			<name>[source path] Starling-Extension-Particle-System-master-src</name>
+			<type>2</type>
+			<locationURI>DOCUMENTS/Kuroneko/libraries/Starling-Extension-Particle-System-master/src</locationURI>
+		</link>
+		<link>
+			<name>[source path] assets</name>
+			<type>2</type>
+			<locationURI>DOCUMENTS/Kuroneko/libraries/Kuroneko/assets</locationURI>
+		</link>
+		<link>
+			<name>[source path] starling-src</name>
+			<type>2</type>
+			<locationURI>DOCUMENTS/Kuroneko/libraries/starling/src</locationURI>
+		</link>
+		<link>
+			<name>[source path] system</name>
+			<type>2</type>
+			<locationURI>DOCUMENTS/Kuroneko/libraries/Kuroneko/system</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>
