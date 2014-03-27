@@ -4,7 +4,6 @@ package scenes {
 	import starling.display.Button;
 	import starling.display.Sprite;
 	import starling.text.BitmapFont;
-	import starling.text.TextField;
 	import starling.utils.Color;
 	
 	public class MainMenu extends Sprite {
@@ -13,18 +12,24 @@ package scenes {
 		public function MainMenu() {
 			instance = this;
 			
-			var start:Button = new Button(Assets.getTexture("bubble"), "Start");
-			start.alpha = 0.5;
-			start.fontName = "Cooper Black Large";
-			start.fontSize = BitmapFont.NATIVE_SIZE;
-			start.scaleX = start.scaleY = 0.5;
-			start.x = (Constants.GameWidth - start.width) * 0.5;
-			start.y = (Constants.GameHeight - start.height) * 0.5;
-			start.name = getQualifiedClassName(GamePage);
-			addChild(start);
+			var katakana:Button = new Button(Assets.getTexture("blankbutton"), "カタカナ");
+			katakana.fontName = "SimSunKana";
+			katakana.fontSize = BitmapFont.NATIVE_SIZE;
+			katakana.fontColor = Color.WHITE;
+			katakana.x = (Constants.GameWidth - katakana.width) * 0.5;
+			katakana.y = (Constants.GameHeight - katakana.height) * 0.75;
+			katakana.name = getQualifiedClassName(GamePage);
+			addChild(katakana);
 			
-			var title:TextField = new TextField(Constants.GameWidth, Constants.GameHeight * 0.5, "Bubble\nPop!", "Cooper Black Large", BitmapFont.NATIVE_SIZE, Color.RED);
-			addChild(title);
+			var hiragana:Button = new Button(Assets.getTexture("blankbutton"), "ひらがな");
+			hiragana.fontName = "SimSunKana";
+			hiragana.fontSize = BitmapFont.NATIVE_SIZE;
+			hiragana.fontColor = Color.WHITE;
+			hiragana.x = (Constants.GameWidth - hiragana.width) * 0.5;
+			hiragana.y = (Constants.GameHeight - hiragana.height) * 0.25;
+			hiragana.name = getQualifiedClassName(GamePage);
+			addChild(hiragana);
+			
 		}
 	}
 }

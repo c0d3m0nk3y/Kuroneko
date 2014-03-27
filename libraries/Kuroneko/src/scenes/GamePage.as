@@ -1,9 +1,12 @@
 package scenes {
-	import objects.Bubble;
+	import objects.Card;
+	import objects.Cell;
+	
 	
 	public class GamePage extends Scene {
-		private static const NUM_BUBBLES:int = 24;
-		private var bubbles:Vector.<Bubble>;
+		private static const NUM_KANA:int = 46;
+		private var cells:Vector.<Cell>;
+		private var cards:Vector.<Card>;
 		
 		public function GamePage() {
 			super();
@@ -14,19 +17,26 @@ package scenes {
 		override protected function initialise():void {
 			super.initialise();
 			
-			for each(var bubble:Bubble in bubbles) {
-				addChild(bubble);
+		}
+		
+		private function makeCells():void {
+			cells = new Vector.<Cell>();
+			for(var cellsIndex:int = 0; cellsIndex < NUM_KANA; cellsIndex++) {
+				cells.push(new Cell());
+			}
+		}
+		
+		private function makeCards():void {
+			cards = new Vector.<Card>();
+			for(var cardsIndex:int = 0; cardsIndex < NUM_KANA; cardsIndex++) {
+				cards.push(new Card());
 			}
 		}
 		
 		private function makeObjects():void {
-			bubbles = new Vector.<Bubble>();
+			makeCells();
+			makeCards();
 			
-			for(var bubbleIndex:int = 0; bubbleIndex < NUM_BUBBLES; bubbleIndex++) {
-				var bubble:Bubble = new Bubble(Assets.getTexture("bubble"));
-				
-				bubbles.push(bubble);
-			}
 		}
 	}
 }
