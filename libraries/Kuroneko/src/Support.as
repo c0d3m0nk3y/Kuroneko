@@ -101,7 +101,7 @@ package {
 			
 			trace(message);
 			
-			Hitomi.addDebug(message);
+			Kuroneko.addDebug(message);
 		
 		}
 		
