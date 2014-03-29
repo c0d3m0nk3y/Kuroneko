@@ -5,6 +5,8 @@ package scenes {
 	
 	public class GamePage extends Scene {
 		private static const NUM_KANA:int = 46;
+		private static const NUM_COLS:int = 5;
+		private static const NUM_ROWS:int = 11;
 		private var cells:Vector.<Cell>;
 		private var cards:Vector.<Card>;
 		
@@ -14,15 +16,22 @@ package scenes {
 			makeObjects();
 		}
 		
-		override protected function initialise():void {
-			super.initialise();
+		override protected function onAddedToStage():void {
+			super.onAddedToStage();
 			
+			for each(var cell:Cell in cells) {
+				addChild(cell);
+			}
 		}
 		
 		private function makeCells():void {
 			cells = new Vector.<Cell>();
-			for(var cellsIndex:int = 0; cellsIndex < NUM_KANA; cellsIndex++) {
-				cells.push(new Cell());
+			for(var row:int = 0; row < NUM_ROWS; row++) {
+				for(var col:int = 0; col < NUM_COLS; col++) {
+					var cell:Cell = new Cell();
+					cell.x = (col % NUM_COLS) * cell.width;
+					cell.y = (row % NUM_ROWS) * cell.height;
+				}
 			}
 		}
 		

@@ -20,14 +20,14 @@ package scenes {
 			removeAllDelayedCalls();
 		}
 		
-		protected function initialise():void {
+		private function initialiseListeners():void {
 			addEventListener(TouchEvent.TOUCH, onTouch);
 			addEventListener(Event.ENTER_FRAME, onTick);
 		}
 		
 		protected function onAddedToStage():void {
 			this.removeEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
-			initialise();
+			initialiseListeners();
 		}
 		
 		protected function onTick(e:Event=null):void {
