@@ -9,8 +9,11 @@ package objects
 		{
 			super();
 			
-			
-			addChild(new Quad(Constants.GameWidth * 0.2, Constants.GameWidth * 0.2, 0xff0000));
+			addChild(new Quad(Constants.GameWidth * 0.15, Constants.GameWidth * 0.15, 0xff0000));
+			var quad:Quad = new Quad(Constants.GameWidth * 0.14, Constants.GameWidth * 0.14, 0x000000);
+			quad.x = Constants.GameWidth * 0.005;
+			quad.y = Constants.GameWidth * 0.005;
+			addChild(quad);
 		}
 	}
 }
