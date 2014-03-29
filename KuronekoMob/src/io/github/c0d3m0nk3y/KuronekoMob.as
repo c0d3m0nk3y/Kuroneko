@@ -12,7 +12,7 @@ package io.github.c0d3m0nk3y {
 	import starling.utils.RectangleUtil;
 	import starling.utils.ScaleMode;
 	
-	[SWF(frameRate = "30", width = "600", height = "800", backgroundColor = "0x333333")]
+	[SWF(frameRate = "30", width = "600", height = "800", backgroundColor = "0x0")]
 	public class KuronekoMob extends Sprite {
 		// Startup image for HD screens
 //		[Embed(source = "../../../../../libraries/Kuroneko/system/startup.png")]
