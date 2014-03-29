@@ -7,6 +7,7 @@ package objects
 	public class Card extends Sprite
 	{
 		private var _owner:Cell;
+		private var _tempOwner:Cell;
 		private var _letter:TextField;
 		
 		public function Card(owner:Cell)
@@ -14,7 +15,17 @@ package objects
 			super();
 			_owner = owner;
 			var quad:Quad = new Quad(Constants.GameWidth * 0.15, Constants.GameWidth * 0.15, 0x000000);
+			quad.alpha = 0;
 			addChild(quad);
+		}
+		
+		public function returnToTempOwner():void {
+			pivotX = 0;
+			pivotY = 0;
+			removeFromParent();
+			_tempOwner.addChild(this);
+			x = 0;
+			y = 0;
 		}
 		
 		public function returnToOwner():void {
@@ -22,8 +33,20 @@ package objects
 			pivotY = 0;
 			removeFromParent();
 			_owner.addChild(this);
-			x = 0;//parent.x;
-			y = 0;//parent.y;
+			x = 0;
+			y = 0;
 		}
+
+		public function set tempCell(value:Cell):void
+		{
+			_tempOwner = value;
+		}
+
+		public function get tempCell():Cell
+		{
+			return _tempOwner;
+		}
+
+
 	}
 }

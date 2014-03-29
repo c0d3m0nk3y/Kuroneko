@@ -7,24 +7,48 @@ package objects
 	public class Cell extends Sprite
 	{
 		private var _card:Card;
+		private var _hasCard:Boolean;
+		private var _tempCard:Card;
 		
 		public function Cell()
 		{
 			super();
 			
-//			addChild(new Quad(Constants.GameWidth * 0.15, Constants.GameWidth * 0.15, 0xff0000));
+			_hasCard = false;
+			
 			var quad:Quad = new Quad(Constants.GameWidth * 0.15, Constants.GameWidth * 0.15, 0x000000);
 			quad.touchable = false;
-//			quad.x = Constants.GameWidth * 0.005;
-//			quad.y = Constants.GameWidth * 0.005;
 			addChild(quad);
 		}
 		
 		public function giveCard(textField:TextField):void {
+			_hasCard = true;
 			_card = new Card(this);
 			textField.touchable = false;
 			_card.addChild(textField);
 			addChild(_card);
 		}
+
+		public function get hasCard():Boolean
+		{
+			return _hasCard;
+		}
+
+		public function get card():Card
+		{
+			return _card;
+		}
+
+		public function set tempCard(value:Card):void
+		{
+			_tempCard = value;
+		}
+
+		public function get tempCard():Card
+		{
+			return _tempCard;
+		}
+
+
 	}
 }
