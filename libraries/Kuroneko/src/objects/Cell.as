@@ -16,7 +16,7 @@ package objects
 			
 			_hasCard = false;
 			
-			var quad:Quad = new Quad(Constants.GameWidth * 0.15, Constants.GameWidth * 0.15, 0x000000);
+			var quad:Quad = new Quad(Constants.GameWidth * 0.2, Constants.GameHeight / 11, 0x000000);
 			quad.touchable = false;
 			addChild(quad);
 		}
@@ -24,8 +24,9 @@ package objects
 		public function giveCard(textField:TextField):void {
 			_hasCard = true;
 			_card = new Card(this);
+			_card.locked = true;
 			textField.touchable = false;
-			_card.addChild(textField);
+			_card.setText(textField);
 			addChild(_card);
 		}
 
