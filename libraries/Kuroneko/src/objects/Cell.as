@@ -16,7 +16,7 @@ package objects
 			
 			_hasCard = false;
 			
-			var quad:Quad = new Quad(Constants.GameWidth * 0.2, Constants.GameHeight / 11, 0x000000);
+			var quad:Quad = new Quad(Constants.GameWidth * 0.2, (Constants.GameHeight - 50) / 11, 0x000000);
 			quad.touchable = false;
 			addChild(quad);
 		}

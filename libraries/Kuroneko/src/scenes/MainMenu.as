@@ -8,11 +8,7 @@ package scenes {
 	import starling.utils.Color;
 	
 	public class MainMenu extends Sprite {
-		public static var instance:MainMenu;
-		
 		public function MainMenu() {
-			instance = this;
-			
 			var title:TextField = new TextField(Constants.GameWidth * 0.9, Constants.GameHeight * 0.1, "Katakana Puzzle", "Romanji", BitmapFont.NATIVE_SIZE, 0xffffff);
 			title.x = Constants.GameWidth * 0.05;
 			addChild(title);
@@ -35,7 +31,6 @@ package scenes {
 			katakana.y = (Constants.GameHeight - katakana.height) * 0.85;
 			katakana.name = getQualifiedClassName(GamePage);
 			addChild(katakana);
-			
 		}
 	}
 }
