@@ -28,11 +28,11 @@ package
 		
 		// Bitmap Fonts
 		
-		[Embed(source="/fonts/cooperblacklg.fnt", mimeType="application/octet-stream")]
-		public static const cooperblacklg_fnt:Class;
-		
-		[Embed(source = "/fonts/cooperblacklg.png")]
-		public static const cooperblacklg:Class;
+//		[Embed(source="/fonts/cooperblacklg.fnt", mimeType="application/octet-stream")]
+//		public static const cooperblacklg_fnt:Class;
+//		
+//		[Embed(source = "/fonts/cooperblacklg.png")]
+//		public static const cooperblacklg:Class;
 		
 		// Sounds
 		
