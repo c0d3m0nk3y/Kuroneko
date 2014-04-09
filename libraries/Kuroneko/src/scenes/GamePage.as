@@ -105,20 +105,20 @@ package scenes {
 		
 		private function initAdMob():void {
 			try {
-				_admob = new AdMob();
-				_admob.addEventListener(AdEvent.INIT_OK, onEvent);
-				_admob.addEventListener(AdEvent.INIT_FAIL, onEvent);
-				_admob.addEventListener(AdEvent.AD_SHOW_OK, onEvent);
-				_admob.addEventListener(AdEvent.AD_SHOW_FAIL, onEvent);
-				_admob.addEventListener(AdEvent.PRESENT_SCREEN, onEvent);
-				_admob.addEventListener(AdEvent.DISMISS_SCREEN, onEvent);
-				_admob.addEventListener(AdEvent.LEAVE_APPLICATION, onEvent);
-				_admob.addEventListener(AdEvent.INTERSTITIAL_CACHE_OK, onEvent);
-				_admob.addEventListener(AdEvent.INTERSTITIAL_CACHE_OK, onEvent);
-				_admob.addEventListener(AdEvent.INTERSTITIAL_CLOSED, onEvent);
-				_admob.init("ca-app-pub-3134016349170574/8488596644");
-				
-				_admob.show(AdParams.SIZE_BANNER, AdParams.HALIGN_CENTER, AdParams.VALIGN_BOTTOM);
+//				_admob = new AdMob();
+//				_admob.addEventListener(AdEvent.INIT_OK, onEvent);
+//				_admob.addEventListener(AdEvent.INIT_FAIL, onEvent);
+//				_admob.addEventListener(AdEvent.AD_SHOW_OK, onEvent);
+//				_admob.addEventListener(AdEvent.AD_SHOW_FAIL, onEvent);
+//				_admob.addEventListener(AdEvent.PRESENT_SCREEN, onEvent);
+//				_admob.addEventListener(AdEvent.DISMISS_SCREEN, onEvent);
+//				_admob.addEventListener(AdEvent.LEAVE_APPLICATION, onEvent);
+//				_admob.addEventListener(AdEvent.INTERSTITIAL_CACHE_OK, onEvent);
+//				_admob.addEventListener(AdEvent.INTERSTITIAL_CACHE_OK, onEvent);
+//				_admob.addEventListener(AdEvent.INTERSTITIAL_CLOSED, onEvent);
+//				_admob.init("ca-app-pub-3134016349170574/8488596644");
+//				
+//				_admob.show(AdParams.SIZE_BANNER, AdParams.HALIGN_CENTER, AdParams.VALIGN_BOTTOM);
 			} catch(e:Error) {
 				Support.log("GamePage.initAdMob",e);
 			}
