@@ -129,11 +129,11 @@
 	<!-- The icon the system uses for the application. For at least one resolution,
 	specify the path to a PNG file included in the AIR package. Optional. -->
 	<icon>
-		<image48x48>logo48.png</image48x48>
-		<image57x57>logo57.png</image57x57>
-		<image72x72>logo72.png</image72x72>
-		<image114x114>logo114.png</image114x114>
-		<image512x512>logo512.png</image512x512>
+		<image48x48>hlogo48.png</image48x48>
+		<image57x57>hlogo57.png</image57x57>
+		<image72x72>hlogo72.png</image72x72>
+		<image114x114>hlogo114.png</image114x114>
+		<image512x512>hlogo512.png</image512x512>
 	</icon>
 	<!-- <icon>
 		<image16x16></image16x16>
