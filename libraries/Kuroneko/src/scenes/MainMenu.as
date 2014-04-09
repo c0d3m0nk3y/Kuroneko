@@ -9,7 +9,7 @@ package scenes {
 	
 	public class MainMenu extends Sprite {
 		public function MainMenu() {
-			var title:TextField = new TextField(Constants.GameWidth * 0.9, Constants.GameHeight * 0.1, "Katakana Puzzle", "Romanji", BitmapFont.NATIVE_SIZE, 0xffffff);
+			var title:TextField = new TextField(Constants.GameWidth * 0.9, Constants.GameHeight * 0.1, "Hiragana Puzzle", "Romanji", BitmapFont.NATIVE_SIZE, 0xffffff);
 			title.x = Constants.GameWidth * 0.05;
 			addChild(title);
 			
@@ -18,7 +18,7 @@ package scenes {
 			free.y = Constants.GameHeight * 0.1;
 			addChild(free);
 			
-			var textField:TextField = new TextField(Constants.GameWidth * 0.9, Constants.GameHeight * 0.4, "Rapidly develop your knowledge of the Japaneses Katakana Syllabry.\nMemorize the locations of all the Kana.  Return them to their original location after shuffling.", "Romanji", BitmapFont.NATIVE_SIZE * 0.6, 0xffffff);
+			var textField:TextField = new TextField(Constants.GameWidth * 0.9, Constants.GameHeight * 0.4, "Rapidly develop your knowledge of the Japaneses Hiragana Syllabry.\nMemorize the locations of all the Kana.  Return them to their original location after shuffling.", "Romanji", BitmapFont.NATIVE_SIZE * 0.6, 0xffffff);
 			textField.y = Constants.GameHeight * 0.2;
 			textField.x = Constants.GameWidth * 0.05;
 			addChild(textField);
