@@ -116,7 +116,7 @@ package scenes {
 				_admob.addEventListener(AdEvent.INTERSTITIAL_CACHE_OK, onEvent);
 				_admob.addEventListener(AdEvent.INTERSTITIAL_CACHE_OK, onEvent);
 				_admob.addEventListener(AdEvent.INTERSTITIAL_CLOSED, onEvent);
-				_admob.init("ca-app-pub-3134016349170574/8488596644");
+				_admob.init("ca-app-pub-3134016349170574/2035960240");
 				
 				_admob.show(AdParams.SIZE_BANNER, AdParams.HALIGN_CENTER, AdParams.VALIGN_BOTTOM);
 			} catch(e:Error) {
@@ -177,7 +177,7 @@ package scenes {
 			}
 		}
 		
-		private function onEvent(ae:AdEvent):void {
+		private function onEvent(ae:AdEvent=null):void {
 //			Support.log(ae.type + " " + ae._data);
 		}
 		

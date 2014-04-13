@@ -5,7 +5,6 @@ package scenes {
 	import starling.display.Sprite;
 	import starling.text.BitmapFont;
 	import starling.text.TextField;
-	import starling.utils.Color;
 	
 	public class MainMenu extends Sprite {
 		public function MainMenu() {
@@ -26,9 +25,9 @@ package scenes {
 			var katakana:Button = new Button(Assets.getTexture("blankbutton"), "Katakana");
 			katakana.fontName = "Romanji";
 			katakana.fontSize = BitmapFont.NATIVE_SIZE;
-			katakana.fontColor = Color.WHITE;
+			katakana.fontColor = 0xFF7790;
 			katakana.x = (Constants.GameWidth - katakana.width) * 0.5;
-			katakana.y = (Constants.GameHeight - katakana.height) * 0.75;
+			katakana.y = (Constants.GameHeight - katakana.height) * 0.7;
 			katakana.name = getQualifiedClassName(KatakanaPuzzle);
 			addChild(katakana);
 			
@@ -36,9 +35,9 @@ package scenes {
 			var hiragana:Button = new Button(Assets.getTexture("blankbutton"), "Hiragana");
 			hiragana.fontName = "Romanji";
 			hiragana.fontSize = BitmapFont.NATIVE_SIZE;
-			hiragana.fontColor = Color.WHITE;
+			hiragana.fontColor = 0xFFF67F;
 			hiragana.x = (Constants.GameWidth - hiragana.width) * 0.5;
-			hiragana.y = (Constants.GameHeight - hiragana.height) * 0.95;
+			hiragana.y = (Constants.GameHeight - hiragana.height) * 0.85;
 			hiragana.name = getQualifiedClassName(HiraganaPuzzle);
 			addChild(hiragana);
 		}
