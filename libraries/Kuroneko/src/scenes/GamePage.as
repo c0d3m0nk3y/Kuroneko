@@ -12,7 +12,6 @@ package scenes {
 	import starling.events.TouchEvent;
 	import starling.events.TouchPhase;
 	import starling.text.BitmapFont;
-	import starling.text.TextField;
 	
 	public class GamePage extends Scene {
 		private static const NUM_COLS:int = 5;
@@ -25,7 +24,6 @@ package scenes {
 			makeObjects();
 		}
 		
-		private var _admob:AdMob;
 		protected var _cells:Vector.<Cell>;
 		
 		private var _selectedCard:Card;
@@ -103,27 +101,6 @@ package scenes {
 			return fingerTarget;
 		}
 		
-		private function initAdMob():void {
-			try {
-				_admob = new AdMob();
-				_admob.addEventListener(AdEvent.INIT_OK, onEvent);
-				_admob.addEventListener(AdEvent.INIT_FAIL, onEvent);
-				_admob.addEventListener(AdEvent.AD_SHOW_OK, onEvent);
-				_admob.addEventListener(AdEvent.AD_SHOW_FAIL, onEvent);
-				_admob.addEventListener(AdEvent.PRESENT_SCREEN, onEvent);
-				_admob.addEventListener(AdEvent.DISMISS_SCREEN, onEvent);
-				_admob.addEventListener(AdEvent.LEAVE_APPLICATION, onEvent);
-				_admob.addEventListener(AdEvent.INTERSTITIAL_CACHE_OK, onEvent);
-				_admob.addEventListener(AdEvent.INTERSTITIAL_CACHE_OK, onEvent);
-				_admob.addEventListener(AdEvent.INTERSTITIAL_CLOSED, onEvent);
-				_admob.init("ca-app-pub-3134016349170574/2035960240");
-				
-				_admob.show(AdParams.SIZE_BANNER, AdParams.HALIGN_CENTER, AdParams.VALIGN_BOTTOM);
-			} catch(e:Error) {
-				Support.log("GamePage.initAdMob",e);
-			}
-		}
-		
 		private function lockCorrectCards():void {
 			for each (var cell:Cell in _cells) {
 				if (cell.hasCard) {
@@ -155,8 +132,6 @@ package scenes {
 		}
 		
 		private function makeObjects():void {
-			initAdMob();
-			
 			_shuffleButton = new Button(Assets.getTexture("shufflebutton"), "Shuffle");
 			_shuffleButton.fontName = "Romanji";
 			_shuffleButton.fontColor = 0xffffff;
@@ -175,10 +150,6 @@ package scenes {
 				_selectedCard.x = touch.globalX;
 				_selectedCard.y = touch.globalY;
 			}
-		}
-		
-		private function onEvent(ae:AdEvent=null):void {
-//			Support.log(ae.type + " " + ae._data);
 		}
 		
 		private function onShufflePressed(event:Event=null):void {
